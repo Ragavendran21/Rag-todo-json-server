@@ -1,26 +1,27 @@
 # RagTodoJsonServer
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+This project was done usng Angular 16,Angular Material,Bootstrap 5.3,JSON-SERVER being the major technologies which are used 
 
+Here Basic CRUD operation with Technologies like Anackend but acts as fake backend where the data are stored in db.json inside src folder of the project.Using service we try to add,get,update,delete operation using Angular the form module.
+
+Before running the project please install node,NPM ,Angular CLI in your local machine for this project to run in your local
+
+
+To Run the project in your local machine after cloning or downloading please follow the following steps :
+1. Move to the dowload/cloned path of code base and in command prompt/terminal please type following command
+    npm install
+2.Open another terminal window with same path and install npm package which acts as fake backend api named JSON_SERVER 
+   npm install -g json-server
+3.Move to folder containing src of the project folder and again in terminal type the following command at first to run the backend server running 
+   npx json-server --watch db.json
+4.Open another terminal window without closing the previous terminal window type the following 
+   ng serve -o
+
+   Now you will be to view the UI 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
 ## Further help
 
