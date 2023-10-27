@@ -1,0 +1,123 @@
+<div class="bg-form-color">
+  <div mat-dialog-title class="d-flex pt-5 justify-content-between"><h1>Employee form</h1>
+    <button mat-icon-button aria-label="close dialog" mat-dialog-close class="bg-black text-white">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <form [formGroup] = "empForm" (ngSubmit) = "onFormSubmit()">
+  <div mat-dialog-content class="content">
+    <!--Name Row-->
+    <div class="row d-flex g-1 mt-3">
+      <div class="col-6">
+      <mat-form-field appearance="outline" class="col-11">
+        <mat-label>First Name</mat-label>
+        <input matInput type="text" placeholder="Ex. Your Name" name="firstName" formControlName = "firstName">
+        <mat-error *ngIf="empForm.controls['firstName'].errors?.['required']" class="my-2">
+          <span>Please Provide your first name</span>
+       </mat-error>
+       <mat-error *ngIf="empForm.controls['firstName'].errors?.['pattern']" class="my-2">
+        <span>Please Enter only in alphabets</span>
+     </mat-error>
+      </mat-form-field>
+      </div>
+      <div class="col-6">
+      <mat-form-field appearance="outline" class="col-11">
+        <mat-label>Last Name</mat-label>
+        <input matInput type="text" placeholder="Ex. Your Last Name" formControlName = "lastName">
+        <mat-error *ngIf="empForm.controls['lastName'].errors?.['required']" class="my-2">
+          <span>Please Provide your last name</span>
+       </mat-error>
+       <mat-error *ngIf="empForm.controls['lastName'].errors?.['pattern']" class="my-2">
+        <span>Please Enter valid name in alphabets</span>
+     </mat-error>
+      </mat-form-field>
+      </div>
+    </div>
+    <!--DOB and Email row-->
+    <div class="row d-flex g-1 mt-3">
+      <div class="col-6">
+      <mat-form-field appearance="outline" class="col-11">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" placeholder="Ex. sample@gmail.com" formControlName = "email">
+        <mat-error *ngIf="empForm.controls['email'].errors?.['required']">
+          <span>Please Provide your email</span>
+       </mat-error>
+       <mat-error *ngIf="empForm.controls['email'].errors?.['email']">
+        <span>Please enter valid email </span>
+     </mat-error>
+      </mat-form-field>
+      </div>
+      <div class="col-6">
+      <mat-form-field appearance = "outline" class="col-11">
+        <mat-label>Date of Birth</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName = "dateofbirth">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      </div>
+
+    </div>
+    <!--Gender-->
+    <div class="row d-flex g-1 mt-3">
+      <div class="col-12">
+      <mat-radio-group aria-label="Select an option" formControlName = "gender" class="col-11">
+        <mat-label>Gender</mat-label>
+        <mat-radio-button value="male">Male</mat-radio-button>
+        <mat-radio-button value="female">Female</mat-radio-button>
+        <mat-radio-button value="others">Others</mat-radio-button>
+      </mat-radio-group>
+      </div>
+    </div>
+    <!--Education and Company-->
+    <div class="row d-flex g-1 mt-3">
+      <div class="col-6">
+      <mat-form-field appearance="outline" class="col-11">
+        <mat-label>Education</mat-label>
+        <mat-select formControlName = "education">
+          <mat-option  *ngFor = "let val of education" [value]="val">{{val}}</mat-option>
+        </mat-select>
+
+      </mat-form-field>
+      </div>
+      <div class="col-6">
+      <mat-form-field appearance="outline" class="col-11">
+        <mat-label>Company Name</mat-label>
+        <input matInput type="text" placeholder="Ex. Company Name"  formControlName = "company">
+        <mat-error *ngIf="empForm.controls['company'].errors?.['required']" class="my-2">
+          <span>Please Enter company name</span>
+       </mat-error>
+      </mat-form-field>
+
+      </div>
+    </div>
+    <!--Expereince and Package-->
+    <div class="row d-flex g-1 mt-3">
+      <div class="col-6">
+      <mat-form-field appearance="outline" class="col-11">
+        <mat-label>Experience</mat-label>
+        <input matInput type="number" placeholder="Ex. 4" formControlName = "experience">
+        <mat-error *ngIf="empForm.controls['experience'].errors?.['required']">
+          <span>Please enter your experience</span>
+       </mat-error>
+      </mat-form-field>
+      </div>
+      <div class="col-6">
+      <mat-form-field appearance="outline" class="col-11">
+        <mat-label>Package</mat-label>
+        <input matInput type="number" placeholder="Ex. 12" formControlName = "package">
+        <mat-hint>Please Enter in Rupees</mat-hint>
+        <mat-error *ngIf="empForm.controls['package'].errors?.['required']" class="my-2">
+          <span>Please Provide package</span>
+       </mat-error>
+
+      </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <div mat-dialog-actions class="action d-flex col-12 justify-content-center">
+    <button mat-raised-button type="button" [mat-dialog-close]="false" class="col-3 bg-secondary">Cancel</button>
+    <button mat-raised-button color="primary" type="submit" class="col-3 bg-primary">{{data ? 'Update' : 'Save'}}</button>
+  </div>
+  </form>
+</div>

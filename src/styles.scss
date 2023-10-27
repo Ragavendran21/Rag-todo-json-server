@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.example-spacer{
+  flex:1 1 auto;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+@font-face{
+  font-family:'light';
+  src:url('/src/assets/fonts/fira/FiraSans-ExtraLight.ttf')
+}
+@font-face{
+  font-family:'light-italic';
+  src:url('/src/assets/fonts/fira/FiraSans-ExtraLightItalic.ttf')
+}
+@font-face {
+  font-family: 'regular-font';
+  src: url('/src/assets/fonts/fira/FiraSans-Regular.ttf');
+}
+@font-face {
+  font-family: 'medium';
+  src: url('/src/assets/fonts/fira/FiraSans-Medium.ttf');
+}
+@font-face {
+  font-family: 'boldfont';
+  src: url('/src/assets/fonts/fira/FiraSans-Bold.ttf');
+}
+.light{
+  font-family:light;
+}
+.light-italic{
+  font-family:light-italic;
+}
+.regular{
+  font-family:regular-font;
+}
+.medium{
+  font-family:medium;
+}
+.bold-font{
+  font-family:boldfont !important;
+}
+
+.mat-mdc-text-field-wrapper{
+  height:44px !important;
+}
+

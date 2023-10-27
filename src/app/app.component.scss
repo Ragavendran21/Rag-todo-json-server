@@ -1,0 +1,38 @@
+
+
+.header-bg{
+  background: #d53369 ;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #cbad6d, #d53369) ;  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #cbad6d, #d53369); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.add-btn-color{
+  background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.search-box{
+.mat-mdc-text-field-wrapper{
+background: #334d50 !important;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #cbcaa5, #334d50);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #cbcaa5, #334d50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+}
+.table-container{
+  width:100%;
+  overflow-x: auto;
+}
+.content-section{
+  background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+padding-top:15px;
+height:100%;
+}
+.bg-table-color{
+  background-color: #d3ccd2;
+}
+
+.form-text-color{
+color:aquamarine !important ;
+}
